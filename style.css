@@ -16,3 +16,23 @@ body {
   src: url("C:\Users\rayan\AppData\Local\Microsoft\Windows\Fonts")
     format("truetype");
 }
+
+#main {
+  height: 85%;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  padding: 5vw 10vw;
+}
+
+#left {
+  height: 100%;
+  width: 45%;
+  background-color: gray;
+}
+
+#right {
+  height: 100%;
+  width: 55%;
+  background-color: brown;
+}
