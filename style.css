@@ -14,11 +14,11 @@ body {
 main {
   height: 100%;
   background-image: url("https://images.unsplash.com/photo-1453090927415-5f45085b65c0?q=80&w=2048&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-  background-position: bottom;
+  background-position: calc(50% - 0.5px) calc(40% - 0.5px);
   background-size: cover;
 }
 
-#part-1 {
+nav {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -26,7 +26,7 @@ main {
   height: 15%;
 }
 
-#part-1 h1 {
+nav h1 {
   color: rgb(229, 235, 203);
   font-family: "New Amsterdam", sans-serif;
   font-weight: 400;
@@ -34,7 +34,7 @@ main {
   font-size: 70px;
 }
 
-#part-1 h4 {
+nav h4 {
   color: rgb(229, 235, 203);
   font-family: "New Amsterdam", sans-serif;
   font-weight: 400;
@@ -42,33 +42,112 @@ main {
   font-size: 25px;
 }
 
-#part-2 {
+section {
   height: 85%;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
-#part-2 h1 {
-  color: rgb(229, 235, 203);
-  font-weight: 500;
-  font-size: 25px;
-}
+/* section h1 {
+  /* color: rgb(229, 235, 203); */
+/* color: black; */
+/* font-weight: 500; */
+/* font-size: 25px; */
+/* }  */
 
 #left {
   width: 45%;
-  height: 85%;
+  height: 55%;
   background-color: rgba(55, 46, 54, 0.582);
-  border-radius: 5%;
+  border-radius: 2%;
   margin-left: 2%;
-  padding: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#current-song-img-box {
+  height: 68%;
+  width: 40%;
+  border-top-left-radius: 6%;
+  border-bottom-left-radius: 6%;
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  background-color: rgb(227, 236, 221);
+}
+
+#current-song-img {
+  height: 87%;
+  width: 90%;
+  border-bottom-left-radius: 6%;
+  border-bottom-right-radius: 6%;
+  overflow: hidden;
+}
+
+#current-song-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+#controls-and-details {
+  height: 68%;
+  width: 50%;
+  padding: 3%;
+  background-color: rgb(227, 236, 221);
+  border-top-right-radius: 4%;
+  border-bottom-right-radius: 4%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#song-details {
+  height: 50%;
+  width: 100%;
+  margin-right: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 9%;
+}
+
+#song-details h1 {
+  font-weight: 500;
+  font-size: 180%;
+  color: black;
+}
+
+#song-details h4 {
+  font-weight: 500;
+  font-size: 130%;
+  color: rgb(43, 42, 42);
+}
+
+#control-panel {
+  height: 50%;
+  width: 100%;
+  margin-right: 10%;
+  padding: 0 10%;
+  /* background-color: blue; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* gap: 2%; */
+}
+
+#control-panel i {
+  font-size: 250%;
 }
 
 #right {
   width: 45%;
   height: 85%;
   background-color: rgba(55, 46, 54, 0.582);
-  border-radius: 5%;
+  border-radius: 2%;
   margin-right: 2%;
   padding: 2%;
 }
