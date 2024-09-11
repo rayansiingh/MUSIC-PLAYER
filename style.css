@@ -21,7 +21,7 @@ main {
 nav {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
   align-items: center;
   height: 15%;
 }
@@ -68,7 +68,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: top;
-  background-color: rgb(227, 236, 221);
+  background-color: rgba(227, 236, 221, 0.616);
 }
 
 #current-song-img {
@@ -89,7 +89,7 @@ section {
   height: 80%;
   width: 50%;
   padding: 3%;
-  background-color: rgb(227, 236, 221);
+  background-color: rgba(227, 236, 221, 0.616);
   border-top-right-radius: 4%;
   border-bottom-right-radius: 4%;
   display: flex;
@@ -144,3 +144,50 @@ section {
   padding: 2%;
 }
 
+#right h3 {
+  color: rgb(229, 235, 203);
+  font-weight: 550;
+  font-size: 180%;
+}
+
+.all-songs {
+  border-radius: 4%;
+  height: 93%;
+  background-color: rgba(227, 236, 221, 0.616);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.song-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2%;
+  border-bottom: 2px solid black;
+}
+
+.song-card:nth-last-child(1) {
+  border-bottom: none;
+}
+
+.part1 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.song-card img {
+  height: 65px;
+  width: 65px;
+}
+
+.song-card h6 {
+  font-size: 110%;
+  font-weight: 550;
+}
+
+.song-card h2 {
+  font-size: 150%;
+  font-weight: 600;
+}
