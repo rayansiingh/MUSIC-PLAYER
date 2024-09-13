@@ -12,28 +12,37 @@ var arr = [
     duration: "3:43",
   },
   {
-    songName: "Mount Everest",
-    url: "./songs/Mount_Everest.m4a",
-    img: "./images/Mount_Everest.jpeg",
-    duration: "2:37",
+    songName: "Daylight",
+    url: "./songs/Daylight.m4a",
+    img: "./images/Daylight.jpeg",
+    duration: "3:32",
   },
   {
-    songName: "Soni De Nakhre",
-    url: "./songs/Soni_De_Nakhre.m4a",
-    img: "./images/Soni_De_Nakhre.jpg",
-    duration: "4:21",
+    songName: "Formula",
+    url: "./songs/formula.m4a",
+    img: "./images/Formula.jpeg",
+    duration: "1:31",
   },
   {
-    songName: "Uff Teri Adda",
-    url: "./songs/Uff_Teri_Adda.m4a",
-    img: "./images/Uff_Teri_Adda.jpg",
-    duration: "5:04",
+    songName: "Khayaal",
+    url: "./songs/Khayaal.m4a",
+    img: "./images/Khayaal.jpg",
+    duration: "2:42",
   },
 ];
 
-var clutter = "";
-arr.forEach(function (element, index) {
-  clutter += `<div class="song-card" id=${index}>
+var allSongs = document.querySelector(".all-songs");
+var albumCover = document.querySelector("#current-song-img");
+
+var audio = new Audio();
+
+var currentSong = 0;
+
+function mainFunction() {
+  var clutter = "";
+
+  arr.forEach(function (element, index) {
+    clutter += `<div class="song-card" id=${index}>
               <div class="part1">
                 <img
                   src=${element.img}
@@ -43,8 +52,17 @@ arr.forEach(function (element, index) {
               </div>
               <h6>${element.duration}</h6>
             </div>`;
+  });
+
+  allSongs.innerHTML = clutter;
+  audio.src = arr[selectedSong].url;
+  albumCover.style.backgroundImage = `url(${arr[selectedSong].img})`;
+}
+
+mainFunction();
+
+allSongs.addEventListener("click", function (details) {
+  selectedSong.src = details.target.id;
+  mainFunction();
+  audio.play();
 });
-
-// console.log(clutter);
-
-document.querySelector(".all-songs").innerHTML = clutter;
